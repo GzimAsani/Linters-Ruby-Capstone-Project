@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/Documentation
 require_relative './rules'
 
-class RunFile
+class Runfile
   include Linter
   attr_accessor :report,
                 :current_file,
@@ -27,3 +28,4 @@ class RunFile
     @report_mistake << "Trailing space on line(s) #{@trailing_error}" if @trailing_error.length.positive?
   end
 end
+# rubocop:enable Style/Documentation

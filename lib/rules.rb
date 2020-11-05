@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# rubocop: disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
+# rubocop:disable Style/Documentation
 module Linter
   attr_accessor :current_file,
                 :data,
@@ -20,12 +20,7 @@ module Linter
 
   def check_semicolons(each_line)
     each_line.each_with_index do |j, y|
-      if j.end_with?(";\n") ||
-         j.include?('//') ||
-         j.end_with?("{\n") ||
-         j.end_with?("}\n") ||
-         j == "\n" ||
-         j.end_with?(';')
+      if j.end_with?(";\n") || j.include?('//') || j.end_with?("{\n") || j.end_with?("}\n") || j == "\n"
       else
         @tot_errors += 1
         @semicolons_error << y + 1
@@ -33,15 +28,5 @@ module Linter
     end
     [tot_errors, semicolons_error]
   end
-
-  def check_trailing_space
-    data.each_with_index do |row, y|
-      line = data.find_index(row) + 1
-      if row.split('')[-1] == ' '
-        trailing_error += 1
-        tot_errors << y + 1
-      end
-    end
-  end
 end
-# rubocop: enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
+# rubocop:enable Style/Documentation
