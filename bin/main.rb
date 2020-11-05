@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
-
 # rubocop: disable Lint/AmbiguousBlockAssociation
 require_relative '../lib/run_file'
 

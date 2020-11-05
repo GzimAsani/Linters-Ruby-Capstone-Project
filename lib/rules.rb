@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 module Linter
   attr_accessor :current_file,
