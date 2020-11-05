@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 # rubocop: disable Lint/AmbiguousBlockAssociation
-require_relative '../lib/run_file.rb'
+require_relative '../lib/run_file'
 
 puts 'Hello, this is a linter that helps you check the correct style of your JS files'
 puts
@@ -29,7 +31,7 @@ until files_arr.include?(selected_file)
 end
 puts
 file_data = []
-File.foreach(dir_to_check + '/' + selected_file) { |line| file_data.push(line) }
+File.foreach("#{dir_to_check}/#{selected_file}") { |line| file_data.push(line) }
 
 file_to_lint = RunFile.new
 file_to_lint.message(file_data)
