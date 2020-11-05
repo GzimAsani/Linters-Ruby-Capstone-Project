@@ -1,4 +1,3 @@
-
 require_relative '../lib/rules'
 describe Linter do
   include Linter

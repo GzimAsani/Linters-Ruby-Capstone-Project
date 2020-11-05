@@ -1,4 +1,3 @@
-
 module Linter
   attr_accessor :current_file,
                 :data,
