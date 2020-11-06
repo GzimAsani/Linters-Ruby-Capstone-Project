@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # rubocop: disable Lint/AmbiguousBlockAssociation
 require_relative '../lib/run_file'
+require 'colorize'
 
 puts 'Greetings, this file will help you detect your mistakes on Javascript files'
 puts
@@ -42,11 +43,11 @@ file_to_lint = Runfile.new
 file_to_lint.message(file_data)
 
 if file_to_lint.tot_errors.positive?
-  puts "Found #{file_to_lint.tot_errors} errors"
+  puts "Found #{file_to_lint.tot_errors} errors".colorize(:red)
   file_to_lint.linters.each do |err|
     puts err
   end
 else
-  puts 'No errors found!'
+  puts 'No errors found!'.colorize(:green)
 end
 # rubocop: enable Lint/AmbiguousBlockAssociation
