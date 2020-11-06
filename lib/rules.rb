@@ -51,7 +51,7 @@ module Linter
     end
     [@tot_errors, @var_error]
   end
-  
+
   public
   
   def last_line_check(rows)
