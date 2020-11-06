@@ -12,9 +12,11 @@ describe Linter do
       @tot_errors = 0
       @semicolons_error = []
       expect(check_semicolons(arr2)).to eql([3, [1, 2, 3]])
+      expect(check_semicolons(arr2)).not_to eq([2, [1, 2, 3]])
     end
     it 'Array1 should not return any semicolon error' do
       expect(check_semicolons(arr1)).to eql([nil, nil])
+      expect(check_semicolons(arr1)).not_to eq([1, [2, 3]])
     end
   end
 
@@ -23,6 +25,7 @@ describe Linter do
       @cam_err = []
       @tot_errors = 0
       expect(check_class(arr3)).to eql([1, [1]])
+      expect(check_class(arr3)).not_to eq([1, [2]])
     end
   end
   describe '#check_let_const' do
@@ -30,6 +33,7 @@ describe Linter do
       @var_error = []
       @tot_errors = 0
       expect(check_let_const(arr4)).to eql([2, [1, 2]])
+      expect(check_let_const(arr4)).not_to eql([2, [1, 2]])
     end
   end
 end
