@@ -53,7 +53,7 @@ module Linter
   end
 
   public
-  
+
   def last_line_check(rows)
     last_row = rows.size
     unless rows.size.positive? && rows[-1].include?("\n")
