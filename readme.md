@@ -11,7 +11,7 @@
 
 # Installation:
 
-Start by coping the linter folder anywhere in your computer. It is prefered to copy near the file that you want to lint(check). Also installing ruby either globally or in your directory is required before proceeding with linting your file.
+Start by coping the linter folder anywhere in your computer. You can copy the folder by writing "clone https://github.com/GzimAsani/Linters-Ruby-Capstone-Project.git". It is prefered to copy near the file that you want to lint(check). Also installing ruby either globally or in your directory is required before proceeding with linting your file. The next steps are explained under the Instructions section.
 
 # Instructions
 
