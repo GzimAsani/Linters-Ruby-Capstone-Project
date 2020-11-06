@@ -21,14 +21,14 @@ class Runfile
     @const_error = []
   end
 
-  def message(linted)
-    check_semicolons(linted)
+  def message(lint)
+    check_semicolons(lint)
     @linters << "Missing semicolons on line(s) #{@semicolons_error}" if @semicolons_error.length.positive?
-    check_class(linted)
+    check_class(lint)
     @linters << "Classes should start only with uppercase string, line(s) #{@cam_err}" if @cam_err.length.positive?
-    check_let_const(linted)
+    check_let_const(lint)
     @linters << "Variable/Const should start with lowercase, line(s) #{@var_error}" if @var_error.length.positive?
-    last_line_check(linted)
+    last_line_check(lint)
     @linters << @last_line_error
   end
 end

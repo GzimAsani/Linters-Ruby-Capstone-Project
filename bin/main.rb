@@ -7,7 +7,7 @@ puts
 sleep(2.5)
 current_directory = File.dirname(__FILE__)
 pwd = File.expand_path(current_directory)
-puts "You are in #{pwd}"
+puts "You are currently in #{pwd}"
 puts
 sleep(2.5)
 puts 'Next please write the folder containing Javascript files'
