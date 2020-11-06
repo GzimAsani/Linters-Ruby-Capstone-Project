@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# rubocop: disable Lint/AmbiguousBlockAssociation
 require_relative '../lib/run_file'
 
 puts 'Greetings, this file will help you detect your mistakes on Javascript files'
@@ -20,7 +21,7 @@ puts
 puts 'Choose the file that you want to inspect'
 puts
 files_arr = Dir.children(dir_to_check)
-puts files_arr.select ( { |f| f.end_with?('.js') } )
+puts files_arr.select { |f| f.end_with?('.js') }
 puts
 selected_file = gets.chomp
 
@@ -48,4 +49,4 @@ if file_to_lint.tot_errors.positive?
 else
   puts 'No errors found!'
 end
-
+# rubocop: enable Lint/AmbiguousBlockAssociation
