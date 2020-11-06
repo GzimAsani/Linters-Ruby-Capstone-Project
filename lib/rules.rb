@@ -32,7 +32,8 @@ module Linter
     [tot_errors, cam_err]
   end
 
-  private 
+  private
+
   def check_let_const(rows)
     rows.each_with_index do |x, i|
       case x
@@ -52,6 +53,7 @@ module Linter
   end
   
   public
+  
   def last_line_check(rows)
     last_row = rows.size
     unless rows.size.positive? && rows[-1].include?("\n")
