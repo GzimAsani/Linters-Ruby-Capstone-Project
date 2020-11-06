@@ -9,7 +9,6 @@ module Linter
                 :cam_err,
                 :last_line_error
 
- 
   def check_semicolons(each_line)
     each_line.each_with_index do |j, y|
       next if j.end_with?(";\n") || j.end_with?("{\n") || j.end_with?("}\n") || j == "\n" || j.end_with?(';')
@@ -34,7 +33,6 @@ module Linter
   end
 
   private 
-
   def check_let_const(rows)
     rows.each_with_index do |x, i|
       case x
@@ -54,7 +52,6 @@ module Linter
   end
   
   public
-
   def last_line_check(rows)
     last_row = rows.size
     unless rows.size.positive? && rows[-1].include?("\n")
