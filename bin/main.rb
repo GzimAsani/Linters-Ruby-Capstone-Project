@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 # rubocop: disable Lint/AmbiguousBlockAssociation
 require_relative '../lib/run_file'
-require 'colorize'
 
 puts 'Greetings, this file will help you detect your mistakes on Javascript files'
 puts
@@ -31,7 +30,7 @@ until files_arr.include?(selected_file)
   selected_file = gets.chomp
 end
 6.times do |i|
-  print "Checking you\'re file#{'.' * (i % 4)}   \r"
+  print "Checking your file#{'.' * (i % 4)}   \r"
   $stdout.flush
   sleep(0.5)
 end
