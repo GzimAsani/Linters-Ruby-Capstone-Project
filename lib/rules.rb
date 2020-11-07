@@ -64,6 +64,5 @@ module Linter
 
     x = -1
     @last_line_error << "Unexpected blank line after [#{last_row + 1}]" if rows[x] == "\n"
-    @tot_errors += 1
   end
 end
