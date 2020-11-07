@@ -60,9 +60,8 @@ module Linter
       @last_line_error << "Expecting blank line after end [#{last_row}]"
     end
     unless rows.size.positive? && rows[-1] == "\n"
+      x = -1
+      @last_line_error << "Unexpected blank line after [#{last_row + 1}]" if rows[x] == "\n"
     end
-
-    x = -1
-    @last_line_error << "Unexpected blank line after [#{last_row + 1}]" if rows[x] == "\n"
   end
 end
