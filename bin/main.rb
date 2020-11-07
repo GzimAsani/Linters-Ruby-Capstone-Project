@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # rubocop: disable Lint/AmbiguousBlockAssociation
 require_relative '../lib/run_file'
+require 'colorize'
 
 puts 'Greetings, this file will help you detect your mistakes on Javascript files'
 puts
