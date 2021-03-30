@@ -1,6 +1,6 @@
 # Javascript Linter build with Ruby (OOP)
 
-* The purpose of this project was to demonstrate my skills in Ruby programming. In this project I have created a linter of my choice which detects mistakes and let the user know where they have made those mistakes.
+* The purpose of this project was to demonstrate my skills in Ruby programming. In this project I have created a linter of my choice which detects mistakes and let the user know where they have made those mistakes. This simple linter can be very useful when working with javascript and can help reduce your common mistakes.
 
 # Listed below are the styles that this linter checks:
 
