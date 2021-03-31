@@ -2,6 +2,12 @@
 
 * The purpose of this project was to demonstrate my skills in Ruby programming. In this project I have created a linter of my choice which detects mistakes and let the user know where they have made those mistakes. This simple linter can be very useful when working with javascript and can help reduce your common mistakes.
 
+
+# Build with
+
+- Ruby
+- VS code
+
 # Listed below are the styles that this linter checks:
 
 - Semicolons(;) - at the end of each line when that particular line it isn't a closing tag
